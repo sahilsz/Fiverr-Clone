@@ -1,9 +1,26 @@
 // import { Link } from "react-router-dom";
+import { useState } from "react";
 import "./Navbar.css";
+import { useEffect } from "react";
 
 export default function Navbar() {
+  const [active, setActive] = useState(false);
+
+  const isActive = () => {
+    window.scrollY > 0 ? setActive(true) : setActive(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", isActive);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener("scroll", isActive);
+    };
+  }, []);
+
   return (
-    <div className="navbar">
+    <div className={active ? "navbar active" : "navbar"}>
       <div className="container">
         <div className="logo">
           {/* <Link to="/"> */}
@@ -20,11 +37,15 @@ export default function Navbar() {
           <button>Join</button>
         </div>
       </div>
-      <hr />
-      <div className="menu">
-        <span>Test</span>
-        <span>Test 2</span>
-      </div>
+      {active && (
+        <>
+          <hr />
+          <div className="menu">
+            <span>Test</span>
+            <span>Test 2</span>
+          </div>
+        </>
+      )}
     </div>
   );
 }
