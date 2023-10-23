@@ -1,0 +1,61 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #013914;
+  color: white;
+}
+
+.container {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.logo .dot {
+  color: #1dbf73;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center; /* align centerally */
+  font-weight: 500px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.links button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.links button:hover {
+  background-color: #1dbf73;
+  border-color: #1dbf73;
+}
+
+hr {
+  width: 100%;
+  height: 0;
+  border: 0.5px solid rgb(228, 226, 226);
+}
+
+.menu {
+  width: 1200px;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  color: grey;
+  font-family: "Montserrat", sans-serif;
+}
