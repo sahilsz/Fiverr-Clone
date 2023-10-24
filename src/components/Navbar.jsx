@@ -42,7 +42,6 @@ export default function Navbar() {
           <span>Fiverr Business</span>
           <span>Explore</span>
           <span>English</span>
-          <span>Sign In</span>
           {!currentUser?.isSeller && <span>Become a Seller</span>}
           {!currentUser && <button>Join</button>}
           {currentUser && (
@@ -76,16 +75,15 @@ export default function Navbar() {
           )}
         </div>
       </div>
-      {active ||
-        (pathname !== "/" && (
-          <>
-            <hr />
-            <div className="menu">
-              <span>Test</span>
-              <span>Test 2</span>
-            </div>
-          </>
-        ))}
+      {(active || pathname !== "/") && (
+        <>
+          <hr />
+          <div className="menu">
+            <span>Test</span>
+            <span>Test 2</span>
+          </div>
+        </>
+      )}
     </div>
   );
 }

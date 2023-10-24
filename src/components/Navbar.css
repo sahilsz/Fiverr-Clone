@@ -7,6 +7,7 @@
   transition: 0.5s all ease;
   position: sticky;
   top: 0;
+  z-index: 999;
 }
 
 .navbar.active {
@@ -14,23 +15,23 @@
   color: black;
 }
 
-.container {
+.navbar .container {
   width: 1200px;
   display: flex;
   justify-content: space-between;
   padding: 20px 0px;
 }
 
-.logo {
+.navbar .logo {
   font-size: 2rem;
   font-weight: bold;
 }
 
-.logo .dot {
+.navbar .logo .dot {
   color: #1dbf73;
 }
 
-.links {
+.navbar .links {
   display: flex;
   gap: 1.5rem;
   align-items: center; /* align centerally */
@@ -38,7 +39,7 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.links button {
+.navbar .links button {
   padding: 10px 20px;
   border-radius: 5px;
   color: white;
@@ -47,18 +48,18 @@
   background-color: transparent;
 }
 
-.links button:hover {
+.navbar .links button:hover {
   background-color: #1dbf73;
   border-color: #1dbf73;
 }
 
-hr {
+.navbar hr {
   width: 100%;
   height: 0;
   border: 0.5px solid rgb(228, 226, 226);
 }
 
-.menu {
+.navbar .menu {
   width: 1200px;
   padding: 10px 0px;
   display: flex;
@@ -70,7 +71,7 @@ hr {
 
 /* User styles */
 
-.user {
+.navbar .user {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -78,14 +79,14 @@ hr {
   position: relative;
 }
 
-.user img {
+.navbar .user img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.options {
+.navbar .options {
   position: absolute;
   top: 50px;
   right: 0;
