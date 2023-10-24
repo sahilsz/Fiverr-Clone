@@ -1,0 +1,36 @@
+.projectCard {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.projectCard > img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.projectCard .userInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+}
+
+.projectCard .userInfo > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.projectCard .userInfo h2 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.projectCard .userInfo span {
+  font-size: 0.75rem;
+}

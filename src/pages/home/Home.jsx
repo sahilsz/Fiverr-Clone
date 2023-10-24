@@ -1,8 +1,9 @@
 import CategoryCard from "../../components/CategoryCard/CategoryCard";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import Slide from "../../components/Slide/Slide";
 import Featured from "../../components/featured/Featured";
 import TrustedBy from "../../components/trustedBy/TrustedBy";
-import { cards } from "../../data";
+import { cards, projects } from "../../data";
 import "./Home.css";
 
 export default function Home() {
@@ -91,6 +92,12 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <Slide slidesToShow={4} arrowsScroll={4} className="w-100">
+        {projects.map((project) => (
+          <ProjectCard key={project.id} item={project} />
+        ))}
+      </Slide>
     </div>
   );
 }
