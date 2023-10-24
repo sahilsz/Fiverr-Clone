@@ -11,7 +11,7 @@ export default function Home() {
     <div className="home">
       <Featured />
       <TrustedBy />
-      <Slide slidesToShow={5} arrowsScroll={5} className="w-100">
+      <Slide slidesToShow={4} arrowsScroll={4} className="w-100">
         {cards.map((card) => (
           <CategoryCard key={card.id} item={card} />
         ))}
