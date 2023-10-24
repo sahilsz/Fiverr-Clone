@@ -1,0 +1,89 @@
+.featured {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  background-color: #013914;
+  color: white;
+}
+
+.featured .container {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+}
+
+.featured .container .left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.featured .container .left h1 {
+  font-size: 3rem;
+}
+
+.featured .container .left h1 i {
+  font-weight: 300;
+}
+
+.featured .container .left .search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.featured .container .left .search .searchInput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.featured .container .left .search .searchInput img {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+}
+
+.featured .container .left .search .searchInput input {
+  border: none;
+  outline: none;
+  width: 400px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+.featured .container .left .search button {
+  width: 120px;
+  height: 50px;
+  border: none;
+  background-color: #1dbf73;
+  color: white;
+  cursor: pointer;
+}
+
+.featured .container .popular {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.featured .container .popular button {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.featured .container .right {
+  height: 100%;
+}
+
+.featured .container .right img {
+  height: 100%;
+  object-fit: contain;
+}
