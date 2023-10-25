@@ -1,6 +1,7 @@
 import { useState } from "react";
 import GigCard from "../../components/gigCard/GigCard";
 import "./Gigs.css";
+import { gigs } from "../../data";
 
 export default function Gigs() {
   const [open, setOpen] = useState(false);
@@ -42,6 +43,11 @@ export default function Gigs() {
               </div>
             )}
           </div>
+        </div>
+        <div className="cards">
+          {gigs.map((gig) => (
+            <GigCard key={gig.id} item={gig} />
+          ))}
         </div>
       </div>
     </div>

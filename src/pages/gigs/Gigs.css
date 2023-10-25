@@ -94,3 +94,10 @@
 .gigs .menu .right .rightMenu span {
   cursor: pointer;
 }
+
+.gigs .container .cards {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
