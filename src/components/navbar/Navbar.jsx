@@ -82,6 +82,7 @@ export default function Navbar() {
             <span>Test</span>
             <span>Test 2</span>
           </div>
+          <hr />
         </>
       )}
     </div>
