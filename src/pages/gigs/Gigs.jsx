@@ -18,7 +18,8 @@ export default function Gigs() {
         <span className="breadcrumbs">FIVERR &gt; GRAPHICS & DESIGN</span>
         <h1>AI Artists</h1>
         <p>
-          Explore the boundaries of art and technology with Fiverrs's AI artists
+          Explore the boundaries of art and technology with Fiverrs&apos;s AI
+          artists
         </p>
         <div className="menu">
           <div className="left">
