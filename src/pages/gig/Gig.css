@@ -1,0 +1,280 @@
+/* Common Classes */
+.gig .container .left .stars {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.gig .container .left .stars > img {
+  width: 14px;
+  height: 14px;
+}
+
+.gig .container .left .stars > span {
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: #ffc108;
+}
+
+.gig .container .left hr {
+  height: 0;
+  border: 1px solid lightgray;
+  margin: 20px 0;
+}
+
+/* end */
+
+.gig {
+  display: flex;
+  justify-content: center;
+}
+
+.gig .container {
+  width: 1400px;
+  padding: 30px 0;
+  display: flex;
+  gap: 50px;
+}
+
+.gig .container .left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gig .container .left .breadCrumbs {
+  font-weight: 300;
+  font-size: 0.75rem;
+  color: #555;
+}
+
+.gig .container .left .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gig .container .left .pp {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.gig .container .left .user > span {
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.gig .container .left .user .stars > img {
+  width: 14px;
+  height: 14px;
+}
+
+.gig .container .left .slider img {
+  max-height: 500px;
+  object-fit: contain;
+}
+
+.gig .container .left > h2 {
+  font-weight: 400;
+}
+
+.gig .container .left p {
+  font-weight: 300;
+  color: #555;
+  line-height: 25px;
+}
+
+.gig .container .left .seller {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.gig .container .left .seller .user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.gig .container .left .seller .user > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.gig .container .left .seller .user .info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.gig .container .left .seller .user .info > button {
+  background-color: white;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.gig .container .left .seller .box {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.gig .container .left .seller .box .items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gig .container .left .seller .box .items .item {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.gig .container .left .seller .box .items .title {
+  font-weight: 300;
+}
+
+.gig .container .left .reviews {
+  margin-top: 50px;
+}
+
+.gig .container .left .reviews .item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gig .container .left .reviews .item .user {
+  display: flex;
+  align-items: center;
+}
+
+.gig .container .left .reviews .item .pp {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.gig .container .left .reviews .item .country {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: gray;
+}
+
+.gig .container .left .reviews .item .country > img {
+  width: 20px;
+  height: auto;
+}
+
+.gig .container .item .helpful {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gig .container .item .helpful > img {
+  width: 14px;
+  height: 14px;
+}
+
+.gig .container .left .item .helpful hr {
+  height: 0;
+  border: 0.5px solid lightgray;
+  margin: 50px 0;
+}
+
+/* Right */
+
+.gig .container .right {
+  flex: 1;
+  border: 1px solid lightgray;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 150px;
+  max-height: 500px;
+
+  /* To check */
+  height: max-content;
+}
+
+.gig .container .right .price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gig .container .right .h2 {
+  font-weight: 500;
+}
+
+.gig .container .right .h3 {
+  font-weight: 300;
+}
+
+.gig .container .right > p {
+  margin: 10px 0;
+  color: gray;
+}
+
+.gig .container .right .details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+}
+
+.gig .container .right .details .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gig .container .right .features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gig .container .right .features .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: gray;
+  font-weight: 300;
+}
+.gig .container .right .features .item > img {
+  width: 14px;
+  height: 14px;
+}
+
+.gig .container .right .details .item > img {
+  width: 20px;
+  height: 20px;
+}
+
+.gig .container .right > button {
+  background-color: #1dbf73;
+  padding: 10px;
+  color: white;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1rem;
+}
