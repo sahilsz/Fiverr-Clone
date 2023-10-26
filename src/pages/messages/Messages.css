@@ -1,0 +1,63 @@
+.messages {
+  display: flex;
+  justify-content: center;
+}
+
+.messages .container {
+  width: 1400px;
+  padding: 50px 0;
+}
+
+.messages .container .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.messages .container button {
+  padding: 10px;
+  background-color: #1dbf73;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 500px;
+}
+
+.messages .container table {
+  width: 100%;
+}
+
+.messages .container table tr {
+  height: 100px;
+}
+
+.messages .container table tr th {
+  text-align: left;
+}
+
+.messages .container table tr td {
+  padding: 10px;
+}
+
+.messages .container table tr td:first-child {
+  font-weight: 500;
+}
+
+.messages .container table tr td:nth-child(2),
+td:nth-child(3) {
+  color: gray;
+}
+.messages .container table td .image {
+  width: 50px;
+  height: 25px;
+  object-fit: cover;
+}
+
+.messages .container table .message {
+  width: 20px;
+  cursor: pointer;
+}
+
+.messages .container table tr.active {
+  background-color: #1dbf730f;
+}
