@@ -16,7 +16,7 @@
 }
 
 .navbar .container {
-  width: 1200px;
+  width: 1400px;
   display: flex;
   justify-content: space-between;
   padding: 20px 0px;
@@ -60,7 +60,7 @@
 }
 
 .navbar .menu {
-  width: 1200px;
+  width: 1400px;
   padding: 10px 0px;
   display: flex;
   justify-content: space-between;
