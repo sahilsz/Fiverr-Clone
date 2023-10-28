@@ -2,7 +2,7 @@ import Navbar from "./components/navbar/Navbar";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
-import Gigs from "./pages/gigs/gigs";
+import Gigs from "./pages/gigs/Gigs";
 import Gig from "./pages/gig/Gig";
 import Orders from "./pages/orders/Orders";
 import MyGigs from "./pages/myGigs/MyGigs";

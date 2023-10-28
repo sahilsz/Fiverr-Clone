@@ -20,8 +20,15 @@
   gap: 100px;
 }
 
-.add .container .sections .left,
-.right {
+.add .container .sections .left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.add .container .sections .right {
   display: flex;
   flex-direction: column;
   gap: 10px;
