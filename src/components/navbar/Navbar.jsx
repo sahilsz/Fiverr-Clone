@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
 import "./Navbar.css";
+import { useState } from "react";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import req from "../../utils/newRequest";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
 
   const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   const isActive = () => {
     window.scrollY > 0 ? setActive(true) : setActive(false);
@@ -23,10 +24,17 @@ export default function Navbar() {
     };
   }, []);
 
-  const currentUser = {
-    id: 1,
-    username: "darq x",
-    isSeller: true,
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+  const handleLogout = async (e) => {
+    e.preventDefault();
+    try {
+      req.post("/auth/logout");
+      localStorage.setItem("currentUser", null);
+      navigate("/");
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -46,7 +54,7 @@ export default function Navbar() {
           {!currentUser && <button>Join</button>}
           {currentUser && (
             <div className="user" onClick={() => setOpen(!open)}>
-              <img src="/vite.svg" alt="" />
+              <img src={currentUser.img || "/img/noavatar.jpg"} alt="" />
               <span>{currentUser?.username}</span>
               {open && (
                 <div className="options">
@@ -66,7 +74,7 @@ export default function Navbar() {
                   <Link to="/messages" className="link">
                     Messages
                   </Link>
-                  <Link to="/" className="link">
+                  <Link onClick={handleLogout} className="link">
                     Logout
                   </Link>
                 </div>
