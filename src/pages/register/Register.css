@@ -1,0 +1,104 @@
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register > form {
+  display: flex;
+  width: 960px;
+  padding: 100px 0;
+  gap: 120px;
+}
+
+.register > form h1 {
+  color: gray;
+  margin-bottom: 20px;
+}
+.register > form > .left,
+.register .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.register label {
+  color: gray;
+  font: 1.2rem;
+}
+.register input,
+.register textarea {
+  padding: 20px;
+  border: 1px solid rgb(216, 214, 214);
+}
+
+.register button {
+  border: none;
+  padding: 20px;
+  color: white;
+  font-size: 1.2rem;
+  background-color: #1dbf73;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.register .toggle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.register .switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.register .switch > input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.register .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  border-radius: 24px;
+}
+
+.register .slider::before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+}
+
+.register input:checked + .slider {
+  background-color: #2196f3;
+}
+
+.register input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+.register input:checked + .slider::before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
