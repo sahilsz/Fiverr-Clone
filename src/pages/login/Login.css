@@ -1,0 +1,43 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login > form {
+  width: 360px;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login > form > h1 {
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.login > form > label {
+  color: gray;
+  font-size: 1.25rem;
+}
+
+.login > form > input {
+  padding: 20px;
+  border: 1px solid rgb(216, 214, 214);
+}
+
+.login > form > textarea {
+  padding: 20px;
+  border: 1px solid rgb(216, 214, 214);
+}
+
+.login > form > button {
+  border: none;
+  padding: 20px;
+  background-color: #1dbf73;
+  color: whilte;
+  font-size: 1.25rem;
+  font-weight: 500;
+  cursor: pointer;
+}
