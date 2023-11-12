@@ -1,24 +1,39 @@
-import Navbar from "./components/navbar/Navbar";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Footer from "./components/footer/Footer";
+// Pages
+import Gig from "./pages/gig/Gig";
+import Add from "./pages/add/Add";
 import Home from "./pages/home/Home";
 import Gigs from "./pages/gigs/Gigs";
-import Gig from "./pages/gig/Gig";
-import Orders from "./pages/orders/Orders";
-import MyGigs from "./pages/myGigs/MyGigs";
-import Add from "./pages/add/Add";
-import Messages from "./pages/messages/Messages";
-import Message from "./pages/message/Message";
 import Login from "./pages/login/Login";
+import MyGigs from "./pages/myGigs/MyGigs";
+import Orders from "./pages/orders/Orders";
+import Message from "./pages/message/Message";
 import Register from "./pages/register/Register";
+import Messages from "./pages/messages/Messages";
+
+// Components
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
+
+// Imports
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import {
+  QueryClient,
+  QueryClientProvider,
+  useQuery,
+} from "@tanstack/react-query";
 
 function App() {
+  const queryClient = new QueryClient();
+
   const Layout = () => {
     return (
       <div className="app">
-        <Navbar />
-        <Outlet />
-        <Footer />
+        {/* Cache our fetch data */}
+        <QueryClientProvider client={queryClient}>
+          <Navbar />
+          <Outlet />
+          <Footer />
+        </QueryClientProvider>
       </div>
     );
   };
