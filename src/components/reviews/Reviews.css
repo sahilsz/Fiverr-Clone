@@ -1,0 +1,38 @@
+.reviews {
+  margin-top: 50px;
+}
+
+.reviews .review {
+  margin: 40px 0;
+}
+.reviews .add {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reviews .addForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reviews .addForm > input {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+.reviews .addForm > select {
+  padding: 20px;
+  width: 200px;
+  align-self: flex-end;
+}
+
+.reviews .addForm > button {
+  padding: 20px;
+  font-size: 1.1rem;
+  border: none;
+  color: white;
+  background-color: #1dbf73;
+  cursor: pointer;
+}
