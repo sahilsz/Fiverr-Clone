@@ -9,9 +9,8 @@ export default function GigCard({ item }) {
     queryFn: () => req(`/users/${item.userId}`).then((res) => res.data),
   });
 
-  console.log("data", data);
   return (
-    <Link to="/gig/123" className="link">
+    <Link to={`/gigs/${item._id}`} className="link">
       <div className="gigCard">
         <img src={item.cover} alt="" />
         <div className="info">
@@ -25,7 +24,7 @@ export default function GigCard({ item }) {
               <span>{data?.username}</span>
             </div>
           )}
-          <p>{item.desc}</p>
+          <p>{item.title}</p>
           <div className="star">
             <img src="./img/star.png" alt="" />
             <span>
