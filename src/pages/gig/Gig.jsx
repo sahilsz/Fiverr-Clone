@@ -4,6 +4,7 @@ import req from "../../utils/newRequest.js";
 import { Slider } from "infinite-react-carousel";
 import { useParams } from "react-router-dom";
 import Reviews from "../../components/reviews/Reviews.jsx";
+import { Link } from "react-router-dom";
 
 export default function Gig() {
   const { id } = useParams();
@@ -152,7 +153,9 @@ export default function Gig() {
                 </div>
               ))}
             </div>
-            <button>Continue</button>
+            <Link to={`/pay/${id}`}>
+              <button>Continue</button>
+            </Link>
           </div>
         </div>
       )}
