@@ -41,6 +41,17 @@
   font-size: 1.25rem;
 }
 
+.add .container .images {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.add .container .images .imagesInput {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .add .container .sections input,
 select,
 textarea {
@@ -56,4 +67,30 @@ textarea {
   font-weight: 500;
   font-size: 1.25rem;
   cursor: pointer;
+}
+
+.add .container .addFeatures {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add .container .addFeatures input {
+  width: 80%;
+}
+
+.add .container .addedFeatures {
+  display: flex;
+  gap: 20px;
+}
+
+.add .container .addedFeatures button {
+  height: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: transparent;
+  color: red;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
