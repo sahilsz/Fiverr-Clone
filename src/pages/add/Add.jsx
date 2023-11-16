@@ -1,8 +1,11 @@
 import "./Add.css";
 import { useState, useReducer } from "react";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useNavigate } from "react-router-dom";
 
 import { INITIAL_STATE, gigReducer } from "../../reducers/gigReducers";
 import upload from "../../utils/upload";
+import req from "../../utils/newRequest";
 
 export default function Add() {
   const [coverFile, setCoverFile] = useState(null);
@@ -45,6 +48,25 @@ export default function Add() {
     } catch (err) {
       console.log(err);
     }
+  }
+
+  const navigate = useNavigate();
+
+  const queryClient = useQueryClient();
+
+  const mutation = useMutation({
+    mutationFn: (gig) => {
+      return req.post("/gigs", gig);
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries(["myGigs"]);
+    },
+  });
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    mutation.mutate(state);
+    navigate("/mygigs");
   }
 
   return (
@@ -95,7 +117,7 @@ export default function Add() {
               rows="16"
               placeholder="Brief descriptions to introduce your service to customers"
             ></textarea>
-            <button>Create</button>
+            <button onClick={handleSubmit}>Create</button>
           </div>
           <div className="right">
             <label htmlFor="">Service Title</label>
