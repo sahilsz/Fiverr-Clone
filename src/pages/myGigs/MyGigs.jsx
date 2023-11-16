@@ -5,7 +5,7 @@ import "./MyGigs.css";
 import req from "../../utils/newRequest.js";
 
 export default function MyGigs() {
-  const currentUser = localStorage.getItem("currentUser");
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
   const queryClient = useQueryClient();
 
@@ -16,11 +16,11 @@ export default function MyGigs() {
   });
 
   const mutation = useMutation({
-    mutationFn: (id) => req.delete(`/gig/${id}`),
+    mutationFn: (id) => req.delete(`/gigs/${id}`),
     onSuccess: () => queryClient.invalidateQueries(["myGigs"]),
   });
 
-  function handleDelete(gigId) {
+  function handleDelete(id) {
     mutation.mutate(id);
   }
 
