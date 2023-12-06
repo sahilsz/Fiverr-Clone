@@ -1,5 +1,7 @@
-import Navbar from "./components/navbar/Navbar";
+import { Link } from "react-router-dom";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+
+import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import Gigs from "./pages/gigs/Gigs";
@@ -14,11 +16,28 @@ import Login from "./pages/login/Login";
 function App() {
   const Layout = () => {
     return (
-      <div className="app">
-        <Navbar />
-        <Outlet />
-        <Footer />
-      </div>
+      <>
+        <div className="app">
+          <Navbar />
+          <Outlet />
+          <Footer />
+        </div>
+        <div className="warn-container">
+          <div className="warning">
+            <h1>
+              <span>warn:</span> This project is not optimized for smaller
+              screens
+            </h1>
+            <p>
+              Visit this on bigger screen or visit my other projects to check
+              responsive designs
+            </p>
+            <Link to="/sahils.in">
+              <button>Go to Portfolio &rarr;</button>
+            </Link>
+          </div>
+        </div>
+      </>
     );
   };
   const router = createBrowserRouter([

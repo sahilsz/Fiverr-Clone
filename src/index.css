@@ -7,3 +7,60 @@
   text-decoration: none;
   color: inherit;
 }
+
+@media screen and (max-width: 1080px) {
+  .warn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    top: 30%;
+    /* min-height: 15rem; */
+  }
+
+  .warning {
+    background: #111827;
+    color: white;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    gap: 20px;
+    z-index: 99999;
+  }
+
+  .warning span {
+    color: #b91c1c;
+    padding: 4px;
+    /* background: #fca5a598; */
+  }
+
+  .warning p {
+    font-size: 1.2rem;
+  }
+
+  .warning button {
+    background-color: transparent;
+    border: none;
+    border: 1px solid #b91c1c;
+    width: 100%;
+    padding: 0.5rem;
+    color: #b91c1c;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .warning button:hover {
+    background-color: #b91c1c;
+    color: white;
+    transition: all 0.5s;
+    border: none;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .warning {
+    display: none;
+  }
+}
